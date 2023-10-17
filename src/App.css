@@ -1,0 +1,261 @@
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LINESeedKR-Bd";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+::selection {
+  background: #3d6aff;
+  color: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+  border: none;
+}
+
+body {
+  padding: 56px 0 0 0;
+  background: #1a1b1e;
+  overflow-x: hidden;
+  overflow-y: overlay;
+  font-family: "LINESeedKR-Bd", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+}
+
+/*==============================================================================
+=== scroll bar =================================================================
+==============================================================================*/
+
+.body-scrollbar::-webkit-scrollbar {
+  background-color: transparent;
+  width: 6px;
+}
+
+.body-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #55565e;
+  border-radius: 8px;
+}
+
+/*==============================================================================
+=== globalnav ==================================================================
+==============================================================================*/
+
+.globalnav-wrapper {
+  display: block;
+  width: 100%;
+  height: 56px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.globalnav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  background: #1a1b1e;
+  user-select: none;
+}
+
+.globalnav-menu,
+.globalnav-submenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.globalnav-menu-item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.globalnav-menu-item > a {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+.globalnav-menu-item:hover {
+  background-color: #55565e;
+}
+
+.globalnav-submenu-item {
+  display: flex;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0 12px;
+}
+
+.globalnav-submenu-item > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 9px;
+}
+
+/*==============================================================================
+=== main content ===============================================================
+==============================================================================*/
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(12, 60px);
+  column-gap: 20px;
+  padding: 0 10px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 60px);
+  column-gap: inherit;
+  grid-column: 2 / span 10;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 60px);
+  column-gap: inherit;
+  grid-column: 1 / span 10;
+}
+
+.form-team-name {
+  grid-column: span 5 / auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: 76px;
+  padding: 54px 0;
+}
+
+.form-team-name > h2 {
+  font-size: 36px;
+  cursor: default;
+  user-select: none;
+}
+
+.form-team-name > input {
+  font-size: 16px;
+  color: black;
+  padding: 6px 12px;
+  margin-top: 20px;
+  width: 60%;
+}
+
+.form-mode {
+  grid-column: span 10 / auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.form-mode > h2 {
+  font-size: 42px;
+  cursor: default;
+  user-select: none;
+}
+
+.form-btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 32px;
+  margin-top: 22px;
+}
+
+.form-btn {
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid gray;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  background-color: #55565e;
+}
+
+.form-btn--selected {
+  background-color: #3d6aff;
+  border: 2px solid #3d6aff;
+}
+
+.form-btn--selected:hover {
+  background-color: #5b81ff;
+  border-color: #5b81ff;
+}
+
+.form-time-limit {
+  grid-column: span 10 / auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 36px;
+}
+
+.form-time-limit > h2 {
+  font-size: 42px;
+  cursor: default;
+  user-select: none;
+}
+
+.form-submit {
+  grid-column: span 10 / auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 62px;
+}
+
+.form-submit > button {
+  background-color: crimson;
+  padding: 14px 28px;
+  border-radius: 4px;
+}
+
+.form-submit > button:hover {
+  background-color: rgb(224, 59, 92);
+  cursor: pointer;
+}
+
+.form-submit > button > span {
+  font-size: 20px;
+  font-weight: 500;
+}
